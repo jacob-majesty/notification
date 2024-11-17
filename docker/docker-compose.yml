@@ -1,0 +1,12 @@
+services:
+  mysql:
+    container_name: 'notification-mysql'
+    image: 'mysql:latest'
+    restart: always
+    environment:
+      - 'MYSQL_DATABASE=notificationdb'
+      - 'MYSQL_PASSWORD=123'
+      - 'MYSQL_ROOT_PASSWORD=123'
+      - 'MYSQL_USER=root'
+    ports:
+      - '3305:3306'
